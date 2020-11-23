@@ -12,26 +12,26 @@ Layouts have Flexbox components (Row ,Column and FlexItem) and Grid components (
 
 ## Row / Column
 
-'''js
-import {Row, Column} from 'layouts'
-'''
+```js
+import { Row, Column } from 'layouts'
+```
 
 ## FlexItem
 
 FlexItem is used to as child of a Row or Column
 
-'''js
-import {FlexItem} from 'layouts'
-'''
+```js
+import { FlexItem } from 'layouts'
+```
 
 ## Grid
 
-'''js
-import {Grid} from 'layouts'
-'''
+```js
+import { Grid } from 'layouts'
+```
 
 ## GridItem
 
-'''js
-import {GridItem} from 'layouts'
-'''
+```js
+import { GridItem } from 'layouts'
+```
