@@ -24,7 +24,7 @@
     templateCols && (style.gridTemplateColumns = templateCols)
     templateAreas && (style.gridTemplateAreas = templateAreas)
     rowGap && (style.gridRowGap = rowGap)
-    colGap && (style.colGap = colGap)
+    colGap && (style.columnGap = colGap)
     autoRows && (style.gridAutoRows = autoRows)
     autoCols && (style.gridAutoColumns = autoCols)
 
