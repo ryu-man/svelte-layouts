@@ -12,15 +12,15 @@ Layouts have three main components: Row, Column and Grid you need to import it f
 
 ## Row / Column
 
-    ```html
-    <script>
-        import { Row, Column } from 'layouts'
-    </script>
+```html
+<script>
+    import { Row, Column } from 'layouts'
+</script>
 
-    <Row></Row>
+<Row></Row>
 
-    <Column></Column>
-    ```
+<Column></Column>
+```
 
 | Prop           | Type    |
 | -------------- | ------- |
@@ -36,13 +36,13 @@ Layouts have three main components: Row, Column and Grid you need to import it f
 
 ## Grid
 
-    ```html
-    <script>
-        import { Grid } from 'layouts'
-    </script>
+```html
+<script>
+    import { Grid } from 'layouts'
+</script>
 
-    <Grid></Grid>
-    ```
+<Grid></Grid>
+```
 
 | Prop           | Type    |
 | -------------- | ------- |
@@ -66,33 +66,33 @@ Layouts have three main components: Row, Column and Grid you need to import it f
 
 As You can use any HTML element in the content you can also use predefined items which let have more control over the element directly
 
-    ```html
-    <script>
-    import { Row } from 'layouts'
-    </script>
+```html
+<script>
+import { Row } from 'layouts'
+</script>
 
-    <Row>
-        // Create div element, can't controls directly
-        // can't control directly
-        <div></div>
+<Row>
+    // Create div element, can't controls directly
+    // can't control directly
+    <div></div>
 
-        // Create a div item 'block'
-        // use can use content props only
-        <Row.item></Row.item>
+    // Create a div item 'block'
+    // use can use content props only
+    <Row.item></Row.item>
 
-        // Create a row item 'flex'
-        // use can use Row props + content props
-        <Row.row></Row.row>
+    // Create a row item 'flex'
+    // use can use Row props + content props
+    <Row.row></Row.row>
 
-        // Create a column item 'flex' direction 'column'
-        // use can use Column props + content props
-        <Row.column></Row.column>
+    // Create a column item 'flex' direction 'column'
+    // use can use Column props + content props
+    <Row.column></Row.column>
 
-        // Create a grid item 'grid'
-        // use can use Grid props + content props
-        <Row.grid></Row.grid>
-    </Row>
-    ```
+    // Create a grid item 'grid'
+    // use can use Grid props + content props
+    <Row.grid></Row.grid>
+</Row>
+```
 
 ### Row/Column Content Props
 
@@ -104,33 +104,33 @@ As You can use any HTML element in the content you can also use predefined items
 | basis     | string |
 | alignSelf | string |
 
-    ```html
-    <script>
-        import { Grid } from 'layouts'
-    </script>
+```html
+<script>
+    import { Grid } from 'layouts'
+</script>
 
-    <Grid>
-        // Create div element, can't controls directly
-        // can't control directly
-        <div></div>
+<Grid>
+    // Create div element, can't controls directly
+    // can't control directly
+    <div></div>
 
-        // Create a div item 'block'
-        // use can use content props only
-        <Grid.item></Grid.item>
+    // Create a div item 'block'
+    // use can use content props only
+    <Grid.item></Grid.item>
 
-        // Create a row item 'flex'
-        // use can use Row props + content props
-        <Grid.row></Grid.row>
+    // Create a row item 'flex'
+    // use can use Row props + content props
+    <Grid.row></Grid.row>
 
-        // Create a column item 'flex' direction 'column'
-        // use can use Column props + content props
-        <Grid.column></Grid.column>
+    // Create a column item 'flex' direction 'column'
+    // use can use Column props + content props
+    <Grid.column></Grid.column>
 
-        // Create a grid item 'grid'
-        // use can use Grid props + content props
-        <Grid.grid></Grid.grid>
-    </Grid>
-    ```
+    // Create a grid item 'grid'
+    // use can use Grid props + content props
+    <Grid.grid></Grid.grid>
+</Grid>
+```
 
 ## Grid Content Props
 
