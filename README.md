@@ -1,3 +1,14 @@
+<p>
+	<img alt="LAYOUTS" src="./banner.png">
+    <br>
+  <!-- <a href="https://www.npmjs.com/package/svelte"> -->
+    <!-- <img src="https://img.shields.io/npm/v/svelte.svg" alt="npm version"> -->
+  <!-- </a> -->
+  <a href="https://github.com/ryu-man/layouts/blob/main/LICENSE">
+    <img src="https://img.shields.io/npm/l/svelte.svg" alt="license">
+  </a>
+</p>
+
 # Layouts
 
 This project is an implementation of css Flexbox & Grid using svelte, it make it easier to use component to structer your page
@@ -77,7 +88,7 @@ import { Row } from 'layouts'
 </script>
 
 <Row>
-    // Create div element, can't controls directly
+    // Create div element
     // can't control directly
     <div></div>
 
