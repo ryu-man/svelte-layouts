@@ -12,8 +12,10 @@ Layouts have three main components: Row, Column and Grid you need to import it f
 
 ## Row / Column
 
-    ```js
-    import { Row, Column } from 'layouts'
+    ```html
+    <script>
+        import { Row, Column } from 'layouts'
+    </script>
 
     <Row></Row>
 
@@ -34,8 +36,10 @@ Layouts have three main components: Row, Column and Grid you need to import it f
 
 ## Grid
 
-    ```js
-    import { Grid } from 'layouts'
+    ```html
+    <script>
+        import { Grid } from 'layouts'
+    </script>
 
     <Grid></Grid>
     ```
@@ -62,8 +66,10 @@ Layouts have three main components: Row, Column and Grid you need to import it f
 
 As You can use any HTML element in the content you can also use predefined items which let have more control over the element directly
 
-    ```js
+    ```html
+    <script>
     import { Row } from 'layouts'
+    </script>
 
     <Row>
         // Create div element, can't controls directly
@@ -98,8 +104,11 @@ As You can use any HTML element in the content you can also use predefined items
 | basis     | string |
 | alignSelf | string |
 
-    ```js
-    import { Grid } from 'layouts'
+    ```html
+    <script>
+        import { Grid } from 'layouts'
+    </script>
+
     <Grid>
         // Create div element, can't controls directly
         // can't control directly
