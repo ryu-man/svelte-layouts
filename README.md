@@ -13,6 +13,7 @@ Layouts have three main components: Row, Column and Grid you need to import it f
 ## Row / Column
 
 ```html
+
 <script>
     import { Row, Column } from 'layouts'
 </script>
@@ -20,6 +21,7 @@ Layouts have three main components: Row, Column and Grid you need to import it f
 <Row></Row>
 
 <Column></Column>
+
 ```
 
 | Prop           | Type    |
@@ -37,11 +39,13 @@ Layouts have three main components: Row, Column and Grid you need to import it f
 ## Grid
 
 ```html
+
 <script>
     import { Grid } from 'layouts'
 </script>
 
 <Grid></Grid>
+
 ```
 
 | Prop           | Type    |
@@ -67,6 +71,7 @@ Layouts have three main components: Row, Column and Grid you need to import it f
 As You can use any HTML element in the content you can also use predefined items which let have more control over the element directly
 
 ```html
+
 <script>
 import { Row } from 'layouts'
 </script>
@@ -92,6 +97,7 @@ import { Row } from 'layouts'
     // use can use Grid props + content props
     <Row.grid></Row.grid>
 </Row>
+
 ```
 
 ### Row/Column Content Props
@@ -105,6 +111,7 @@ import { Row } from 'layouts'
 | alignSelf | string |
 
 ```html
+
 <script>
     import { Grid } from 'layouts'
 </script>
@@ -130,6 +137,7 @@ import { Row } from 'layouts'
     // use can use Grid props + content props
     <Grid.grid></Grid.grid>
 </Grid>
+
 ```
 
 ## Grid Content Props
