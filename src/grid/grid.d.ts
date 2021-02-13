@@ -23,8 +23,6 @@ export interface GridProps extends SharedProps {
   wrap?: Wrap
   inline?: boolean
   reverse?: boolean
-  alignSelf?: string
-  gap?: string
   fluid?: FluidType
 }
 

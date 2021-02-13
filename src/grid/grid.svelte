@@ -4,7 +4,6 @@
     {
       alignContent,
       alignItems,
-      alignSelf,
       autoCols,
       autoRows,
       colGap,
@@ -19,7 +18,6 @@
     justifyContent && (style.justifyContent = justifyContent)
     alignItems && (style.alignItems = alignItems)
     alignContent && (style.alignContent = alignContent)
-    alignSelf && (style.alignSelf = alignSelf)
     templateRows && (style.gridTemplateRows = templateRows)
     templateCols && (style.gridTemplateColumns = templateCols)
     templateAreas && (style.gridTemplateAreas = templateAreas)
@@ -38,7 +36,6 @@
   import { classNames, css } from '../utils'
   export let alignContent
   export let alignItems
-  export let alignSelf
   export let autoCols
   export let autoRows
   export let colGap
@@ -62,7 +59,6 @@
   use:init="{{
     alignContent,
     alignItems,
-    alignSelf,
     autoCols,
     autoRows,
     colGap,
@@ -76,11 +72,7 @@
     templateRows
   }}"
   use:onMount
-  class="{classNames(
-    _class,
-    { inline, reverse, fluid },
-    'grid'
-  )}"
+  class="{classNames(_class, { inline, reverse, fluid }, 'grid')}"
 >
   <slot />
 </div>
@@ -92,7 +84,7 @@
   div.grid.inline {
     display: inline-grid;
   }
-  
+
   .fluid.width {
     width: 100%;
   }
