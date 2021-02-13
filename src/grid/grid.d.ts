@@ -5,7 +5,7 @@ import { SharedProps } from './shared_props'
 import Item from './item'
 import ItemGrid from './item.grid'
 import ItemRow from './item.row'
-import ItemColumn from './item.col'
+import ItemCol from './item.column'
 
 declare type FluidType = 'width' | 'height' | 'both'
 
@@ -39,7 +39,7 @@ declare class Grid extends SvelteComponentTyped<GridProps> {
   static item: new () => Item
   static grid: new () => ItemGrid
   static row: new () => ItemRow
-  static column: new () => ItemColumn
+  static col: new () => ItemCol
 }
 
 export default Grid

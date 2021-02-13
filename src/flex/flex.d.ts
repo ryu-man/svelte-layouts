@@ -2,7 +2,10 @@ import type { SvelteComponentTyped } from 'svelte'
 import { JustifyContent, AlignItems } from '../alignmentt'
 import { Wrap } from '../wrapp'
 import { SharedProps } from '../shared_props'
-import FlexItem from './itemm'
+import Item from './item'
+import ItemRow from './item.row'
+import ItemCol from './item.column'
+import ItemGrid from './item.grid'
 
 declare type FluidType = 'width' | 'height' | 'both'
 
@@ -28,7 +31,7 @@ export interface FlexProps extends SharedProps {
 declare class Flex extends SvelteComponentTyped<FlexProps> {
     static item: new () => Item
     static row: new () => ItemRow
-    static column: new () => ItemColumn
+    static col: new () => ItemCol
     static grid: new () => ItemGrid
 }
 
