@@ -5,6 +5,24 @@
   "module": "dist/index.mjs",
   "svelte": "src/index.js",
   "types": "src/index.d.ts",
+  "description": "Easly structure your page using components",
+  "homepage": "https://github.com/ryu-man/layouts#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryu-man/layouts"
+  },
+  "bugs": {
+    "url": "https://github.com/ryu-man/layouts/issues"
+  },
+  "keywords": [
+    "css",
+    "html",
+    "grid",
+    "layout",
+    "flexbox",
+    "svelte"
+  ],
+  "author": "ryu-man",
   "files": [
     "src"
   ],
