@@ -16,10 +16,6 @@ export interface FlexProps extends SharedProps {
   wrap?: Wrap
   inline?: boolean
   reverse?: boolean
-  order?: string
-  grow?: string
-  shrink?: string
-  basis?: string
   alignSelf?: string
   gap?: string
   fluid?: FluidType
