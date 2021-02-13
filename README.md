@@ -26,12 +26,12 @@ Layouts have three main components: Row, Column and Grid you need to import it f
 ```html
 
 <script>
-    import { Row, Column } from 'layouts'
+    import { Row, Col } from 'layouts'
 </script>
 
 <Row></Row>
 
-<Column></Column>
+<Col></Col>
 
 ```
 
@@ -102,7 +102,7 @@ import { Row } from 'layouts'
 
     // Create a column item 'flex' direction 'column'
     // use can use Column props + content props
-    <Row.column></Row.column>
+    <Row.col></Row.col>
 
     // Create a grid item 'grid'
     // use can use Grid props + content props
@@ -111,7 +111,7 @@ import { Row } from 'layouts'
 
 ```
 
-### Row/Column Content Props
+### Row/Col Content Props
 
 | Prop      | Type   |
 | --------- | ------ |
@@ -122,7 +122,6 @@ import { Row } from 'layouts'
 | alignSelf | string |
 
 ```html
-
 <script>
     import { Grid } from 'layouts'
 </script>
@@ -142,7 +141,7 @@ import { Row } from 'layouts'
 
     // Create a column item 'flex' direction 'column'
     // use can use Column props + content props
-    <Grid.column></Grid.column>
+    <Grid.col></Grid.col>
 
     // Create a grid item 'grid'
     // use can use Grid props + content props
