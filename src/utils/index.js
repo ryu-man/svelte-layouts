@@ -1,12 +1,15 @@
 export function css(node, style = {}) {
   const stylesheet = node.style
-  Object.entries(style || {}).forEach((elem) => {
-    stylesheet[elem[0]] = elem[1]
-  })
+  Object.entries(style || {})
+    .filter(([e1, e2]) => e2)
+    .forEach((elem) => {
+      stylesheet[elem[0]] = elem[1]
+    })
 }
 
 export function classNames(...args) {
   return args
+
     .filter((o) => o)
     .map((o) => {
       if (typeof o === 'string') {
