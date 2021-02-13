@@ -9,7 +9,7 @@
   "homepage": "https://github.com/ryu-man/layouts#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ryu-man/layouts"
+    "url": "git+https://github.com/ryu-man/layouts.git"
   },
   "bugs": {
     "url": "https://github.com/ryu-man/layouts/issues"
@@ -56,5 +56,9 @@
   },
   "dependencies": {
     "sirv-cli": "^1.0.8"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "license": "MIT"
 }
