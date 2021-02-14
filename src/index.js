@@ -1,2 +1,2 @@
 export {Grid} from './grid'
-export {Row,Column} from './flex'
+export {Row,Col} from './flex'
