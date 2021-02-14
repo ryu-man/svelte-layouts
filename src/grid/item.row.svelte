@@ -48,4 +48,6 @@
   justifyContent="{justifyContent}"
   reverse="{reverse}"
   wrap="{wrap}"
-/>
+>
+<slot />
+</Row>
