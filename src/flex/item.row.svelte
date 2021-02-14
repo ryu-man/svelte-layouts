@@ -1,7 +1,6 @@
 <script>
   import Row from '../flex/row.svelte'
-import { classNames } from '../utils';
-  import { init } from './item.svelte'
+  import { classNames } from '../utils'
 
   export let alignContent
   export let alignItems
@@ -25,8 +24,7 @@ import { classNames } from '../utils';
 
 <Row
   class="{classNames(_class, 'flex-item')}"
-  style="{style}"
-  onMount="{(node) => init(node, { alignSelf, basis, grow, order, shrink })}"
+  style="{{ ...style, alignSelf, basis, grow, order, shrink }}"
   alignContent="{alignContent}"
   alignItems="{alignItems}"
   fluid="{fluid}"

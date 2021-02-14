@@ -1,7 +1,6 @@
 <script>
   import { classNames } from '../utils'
   import Grid from './grid.svelte'
-  import { init } from './item.svelte'
 
   export let alignSelf
   export let area
@@ -23,7 +22,7 @@
   export let justifyContent
   export let reverse
   export let rowGap
-  export let style
+  export let style = {}
   export let templateAreas
   export let templateCols
   export let templateRows
@@ -34,19 +33,18 @@
 
 <Grid
   class="{classNames(_class, 'grid-item')}"
-  style="{style}"
-  onMount="{(node) =>
-    init(node, {
-      colStart,
-      colEnd,
-      rowStart,
-      rowEnd,
-      col,
-      row,
-      area,
-      justifySelf,
-      alignSelf
-    })}"
+  style="{{
+    ...style,
+    gridColumnStart: colStart,
+    gridColumnEnd: colEnd,
+    gridRowStart: rowStart,
+    gridRowEnd: rowEnd,
+    gridColumn: col,
+    gridRow: row,
+    gridArea: area,
+    justifySelf,
+    alignSelf
+  }}"
   alignContent="{alignContent}"
   alignItems="{alignItems}"
   autoCols="{autoCols}"

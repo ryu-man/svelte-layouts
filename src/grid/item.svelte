@@ -1,31 +1,3 @@
-<script context="module">
-  export function init(
-    node,
-    {
-      colStart,
-      colEnd,
-      rowStart,
-      rowEnd,
-      col,
-      row,
-      area,
-      justifySelf,
-      alignSelf
-    }
-  ) {
-    const style = node.style
-    colStart && (style.gridColumnStart = colStart)
-    colEnd && (style.gridColumnEnd = colEnd)
-    rowStart && (style.gridRowStart = rowStart)
-    rowEnd && (style.gridRowEnd = rowEnd)
-    col && (style.gridColumn = col)
-    row && (style.gridRow = row)
-    area && (style.gridColumnStart = area)
-    justifySelf && (style.justifySelf = justifySelf)
-    alignSelf && (style.alignSelf = alignSelf)
-  }
-</script>
-
 <script>
   import { classNames, css } from '../utils'
 
@@ -45,15 +17,15 @@
 </script>
 
 <div
-  use:css="{style}"
-  use:init="{{
-    colStart,
-    colEnd,
-    rowStart,
-    rowEnd,
-    col,
-    row,
-    area,
+  use:css="{{
+    ...style,
+    gridColumnStart: colStart,
+    gridColumnEnd: colEnd,
+    gridRowStart: rowStart,
+    gridRowEnd: rowEnd,
+    gridColumn: col,
+    gridRow: row,
+    gridArea: area,
     justifySelf,
     alignSelf
   }}"

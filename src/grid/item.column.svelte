@@ -1,7 +1,6 @@
 <script>
-  import { init } from './item.svelte'
   import Column from '../flex/column.svelte'
-import { classNames } from '../utils'
+  import { classNames } from '../utils'
 
   export let alignSelf
   export let area
@@ -29,19 +28,18 @@ import { classNames } from '../utils'
 
 <Column
   class="{classNames(_class, 'grid-item')}"
-  style="{style}"
-  onMount="{(node) =>
-    init(node, {
-      colStart,
-      colEnd,
-      rowStart,
-      rowEnd,
-      col,
-      row,
-      area,
-      justifySelf,
-      alignSelf
-    })}"
+  style="{{
+    ...style,
+    gridColumnStart: colStart,
+    gridColumnEnd: colEnd,
+    gridRowStart: rowStart,
+    gridRowEnd: rowEnd,
+    gridColumn: col,
+    gridRow: row,
+    gridArea: area,
+    justifySelf,
+    alignSelf
+  }}"
   alignContent="{alignContent}"
   alignItems="{alignItems}"
   fluid="{fluid}"

@@ -1,7 +1,6 @@
 <script>
   import Grid from '../grid/grid.svelte'
   import { classNames } from '../utils'
-  import { init } from './item.svelte'
 
   export let alignSelf
   export let basis
@@ -30,8 +29,7 @@
 
 <Grid
   class="{classNames(_class, 'flex-item')}"
-  style="{style}"
-  onMount="{(node) => init(node, { alignSelf, basis, grow, order, shrink })}"
+  style="{{...style, alignSelf, basis, grow, order, shrink}}"
   alignContent="{alignContent}"
   alignItems="{alignItems}"
   autoCols="{autoCols}"

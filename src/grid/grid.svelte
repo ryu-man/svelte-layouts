@@ -1,37 +1,3 @@
-<script context="module">
-  export function init(
-    node,
-    {
-      alignContent,
-      alignItems,
-      autoCols,
-      autoRows,
-      colGap,
-      justifyContent,
-      rowGap,
-      templateAreas,
-      templateCols,
-      templateRows
-    }
-  ) {
-    const style = node.style
-    justifyContent && (style.justifyContent = justifyContent)
-    alignItems && (style.alignItems = alignItems)
-    alignContent && (style.alignContent = alignContent)
-    templateRows && (style.gridTemplateRows = templateRows)
-    templateCols && (style.gridTemplateColumns = templateCols)
-    templateAreas && (style.gridTemplateAreas = templateAreas)
-    rowGap && (style.gridRowGap = rowGap)
-    colGap && (style.columnGap = colGap)
-    autoRows && (style.gridAutoRows = autoRows)
-    autoCols && (style.gridAutoColumns = autoCols)
-
-    return {
-      destroy() {}
-    }
-  }
-</script>
-
 <script>
   import { classNames, css } from '../utils'
   export let alignContent
@@ -44,34 +10,34 @@
   export let justifyContent
   export let reverse
   export let rowGap
-  export let style
   export let templateAreas
   export let templateCols
   export let templateRows
-  export let onMount = () => {}
+  export let style = {}
 
   let _class = ''
   export { _class as class }
+
+  console.log(style)
 </script>
 
 <div
-  use:css="{style}"
-  use:init="{{
+  use:css="{{
+    ...style,
     alignContent,
     alignItems,
     autoCols,
     autoRows,
-    colGap,
+    gridColumnGap: colGap,
     fluid,
     inline,
     justifyContent,
     reverse,
-    rowGap,
-    templateAreas,
-    templateCols,
-    templateRows
+    gridRowGap: rowGap,
+    gridTemplateAreas: templateAreas,
+    gridTemplateColumns: templateCols,
+    gridTemplateRows: templateRows
   }}"
-  use:onMount
   class="{classNames(_class, { inline, reverse, fluid }, 'grid')}"
 >
   <slot />
