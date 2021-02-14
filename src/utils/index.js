@@ -1,6 +1,6 @@
 export function css(node, style = {}) {
   const stylesheet = node.style
-  Object.entries(style || {})
+  Object.entries(style)
     .filter(([e1, e2]) => e2)
     .forEach((elem) => {
       stylesheet[elem[0]] = elem[1]
