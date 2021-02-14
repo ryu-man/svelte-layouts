@@ -11,28 +11,35 @@
 
 # Layouts
 
-This project is an implementation of css Flexbox & Grid using svelte, it make it easier to use component to structer your page
+This project is an implementation of css Flexbox & Grid for [svelte](https://svelte.dev/) framework
 
 ## Install
 
-Coming soon
+```bash
+// npm
+npm install svelte-layouts
+
+// yarn
+yarn add svelte-layouts
+```
 
 ## Get started
 
-Layouts have three main components: Row, Column and Grid you need to import it from 'layouts' and use it in the template section of a svelte component
+Layouts have three main components: Row, Col (Column) and Grid.
 
-## Row / Column
+_Note: svelte-layouts support type definitions_
+
+## Row / Col
 
 ```html
-
 <script>
-    import { Row, Col } from 'layouts'
+    import { Row, Col } from 'svelte-layouts'
 </script>
 
-<Row></Row>
+// control how elements are positioned horizontally
+<Row justifyContent="space-between"></Row>
 
 <Col></Col>
-
 ```
 
 | Prop           | Type    |
@@ -50,13 +57,12 @@ Layouts have three main components: Row, Column and Grid you need to import it f
 ## Grid
 
 ```html
-
 <script>
     import { Grid } from 'layouts'
 </script>
 
-<Grid></Grid>
-
+// Define the number & width of rows and columns
+<Grid templateRows="auto" templateCols="20vw 1fr"></Grid>
 ```
 
 | Prop           | Type    |
@@ -79,10 +85,9 @@ Layouts have three main components: Row, Column and Grid you need to import it f
 
 ## Content
 
-As You can use any HTML element in the content you can also use predefined items which let have more control over the element directly
+As You can use any HTML element in the content you can also use predefined items which let you have more control over the element directly
 
 ```html
-
 <script>
 import { Row } from 'layouts'
 </script>
@@ -92,23 +97,22 @@ import { Row } from 'layouts'
     // can't control directly
     <div></div>
 
-    // Create a div item 'block'
-    // use can use content props only
+    // Create a div item
+    // you can use content props only
     <Row.item></Row.item>
 
-    // Create a row item 'flex'
-    // use can use Row props + content props
+    // Create a row item
+    // you can use Row props + content props
     <Row.row></Row.row>
 
-    // Create a column item 'flex' direction 'column'
-    // use can use Column props + content props
+    // Create a Col item
+    // you can use Column props + content props
     <Row.col></Row.col>
 
-    // Create a grid item 'grid'
-    // use can use Grid props + content props
+    // Create a grid item
+    // you can use Grid props + content props
     <Row.grid></Row.grid>
 </Row>
-
 ```
 
 ### Row/Col Content Props
@@ -131,23 +135,22 @@ import { Row } from 'layouts'
     // can't control directly
     <div></div>
 
-    // Create a div item 'block'
-    // use can use content props only
+    // Create a div item
+    // you can use content props only
     <Grid.item></Grid.item>
 
-    // Create a row item 'flex'
-    // use can use Row props + content props
+    // Create a row item 
+    // you can use Row props + content props
     <Grid.row></Grid.row>
 
-    // Create a column item 'flex' direction 'column'
-    // use can use Column props + content props
+    // Create a column item
+    // you can use Column props + content props
     <Grid.col></Grid.col>
 
-    // Create a grid item 'grid'
-    // use can use Grid props + content props
+    // Create a grid item 
+    // you can use Grid props + content props
     <Grid.grid></Grid.grid>
 </Grid>
-
 ```
 
 ## Grid Content Props
@@ -165,3 +168,15 @@ import { Row } from 'layouts'
 | area        | string  |
 | gap         | string  |
 | fluid       | string  |
+
+## License
+
+svelte-layouts is [MIT Licenced](./LICENSE)
+
+## Learn More
+
+if you want to learn more about css flexbox and grid and how they works, you can feel free to check out these useful links:
+
+- [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
+  
