@@ -1,7 +1,5 @@
 import type { SvelteComponentTyped } from 'svelte'
-import { JustifyContent, AlignItems } from './alignment'
-import { Wrap } from './wrap'
-import { SharedProps } from './shared_props'
+import type { JustifyContent, AlignItems, Wrap } from '../types'
 import Item from './item'
 import ItemGrid from './item.grid'
 import ItemRow from './item.row'
@@ -9,7 +7,7 @@ import ItemCol from './item.column'
 
 declare type FluidType = 'width' | 'height' | 'both'
 
-export interface GridProps extends SharedProps {
+export interface GridProps {
   templateRows?: string
   templateCols?: string
   templateAreas?: string
@@ -24,6 +22,8 @@ export interface GridProps extends SharedProps {
   inline?: boolean
   reverse?: boolean
   fluid?: FluidType
+  class?: string
+  style?: CSSStyleDeclaration
 }
 
 /**

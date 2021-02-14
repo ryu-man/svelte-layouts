@@ -1,8 +1,7 @@
 import type { SvelteComponentTyped } from 'svelte'
-import { JustifySelf, GridAlignSelf } from './alignment'
-import { SharedProps } from './shared_props'
+import type { JustifySelf, GridAlignSelf } from '../types'
 
-export interface ItemProps extends SharedProps {
+export interface ItemProps {
   colStart?: string
   colEnd?: string
   rowStart?: string

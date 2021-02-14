@@ -1,8 +1,7 @@
 import type { SvelteComponentTyped } from 'svelte'
-import { FlexAlignSelf } from '../alignmentt'
-import { SharedProps } from '../shared_props'
+import type { FlexAlignSelf } from '../types'
 
-export interface ItemProps extends SharedProps{
+export interface ItemProps {
   order?: string
   grow?: string
   shrink?: string
