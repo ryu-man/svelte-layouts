@@ -1,12 +1,19 @@
 <p>
 	<img alt="LAYOUTS" src="./banner.png">
     <br>
-  <!-- <a href="https://www.npmjs.com/package/svelte"> -->
-    <!-- <img src="https://img.shields.io/npm/v/svelte.svg" alt="npm version"> -->
-  <!-- </a> -->
+  <a href="https://www.npmjs.com/package/svelte-layouts">
+    <img src="https://img.shields.io/npm/v/svelte-layouts.svg" alt="npm version">
+  </a>
   <a href="https://github.com/ryu-man/layouts/blob/main/LICENSE">
     <img src="https://img.shields.io/npm/l/svelte.svg" alt="license">
   </a>
+<a href="https://bundlephobia.com/result?p=svelte-layouts">
+  <img src="https://img.shields.io/bundlephobia/min/svelte-layouts"/>
+</a>
+  <a href="https://bundlephobia.com/result?p=svelte-layouts">
+    <img src="https://badgen.net/bundlephobia/minzip/svelte-layouts">
+  </a>
+
 </p>
 
 # Layouts
@@ -58,7 +65,7 @@ _Note: svelte-layouts support type definitions_
 
 ```html
 <script>
-    import { Grid } from 'layouts'
+    import { Grid } from 'svelte-layouts'
 </script>
 
 // Define the number & width of rows and columns
@@ -89,7 +96,7 @@ As You can use any HTML element in the content you can also use predefined items
 
 ```html
 <script>
-import { Row } from 'layouts'
+import { Row } from 'svelte-layouts'
 </script>
 
 <Row>
@@ -127,7 +134,7 @@ import { Row } from 'layouts'
 
 ```html
 <script>
-    import { Grid } from 'layouts'
+    import { Grid } from 'svelte-layouts'
 </script>
 
 <Grid>
