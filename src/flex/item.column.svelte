@@ -24,7 +24,14 @@
 
 <Column
   class="{classNames(_class, 'flex-item')}"
-  style="{{ ...style, alignSelf, basis, grow, order, shrink }}"
+  style="{{
+    ...style,
+    alignSelf,
+    flexBasis: basis,
+    flexGrow: grow,
+    flexShrink: shrink,
+    order
+  }}"
   alignContent="{alignContent}"
   alignItems="{alignItems}"
   fluid="{fluid}"

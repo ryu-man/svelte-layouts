@@ -12,7 +12,14 @@
 </script>
 
 <div
-  use:css="{{...style,  alignSelf, basis, grow, order, shrink}}"
+  use:css="{{
+    ...style,
+    alignSelf,
+    flexBasis: basis,
+    flexGrow: grow,
+    flexShrink: shrink,
+    order
+  }}"
   class="{classNames(_class, 'flex-item')}"
 >
   <slot />
