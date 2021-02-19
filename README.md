@@ -1,6 +1,7 @@
 <p>
 	<img alt="LAYOUTS" src="./banner.png">
-    <br>
+  <br>
+  <br>
   <a href="https://www.npmjs.com/package/svelte-layouts">
     <img src="https://img.shields.io/npm/v/svelte-layouts.svg" alt="npm version">
   </a>
