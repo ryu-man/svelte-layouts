@@ -6,13 +6,13 @@
   "svelte": "src/index.js",
   "types": "src/index.d.ts",
   "description": "Easly structure your page using components",
-  "homepage": "https://github.com/ryu-man/layouts#readme",
+  "homepage": "https://github.com/ryu-man/svelte-layouts#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ryu-man/layouts.git"
+    "url": "git+https://github.com/ryu-man/svelte-layouts.git"
   },
   "bugs": {
-    "url": "https://github.com/ryu-man/layouts/issues"
+    "url": "https://github.com/ryu-man/svelte-layouts/issues"
   },
   "keywords": [
     "css",
