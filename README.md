@@ -1,12 +1,11 @@
 <p>
 	<img alt="LAYOUTS" src="./banner.png">
   <br>
-  <br>
   <a href="https://www.npmjs.com/package/svelte-layouts">
     <img src="https://img.shields.io/npm/v/svelte-layouts.svg" alt="npm version">
   </a>
   <a href="https://github.com/ryu-man/layouts/blob/main/LICENSE">
-    <img src="https://img.shields.io/npm/l/svelte.svg" alt="license">
+    <img src="https://img.shields.io/npm/l/svelte-layouts.svg" alt="license">
   </a>
 <a href="https://bundlephobia.com/result?p=svelte-layouts">
   <img src="https://img.shields.io/bundlephobia/min/svelte-layouts"/>
@@ -187,4 +186,5 @@ if you want to learn more about css flexbox and grid and how they works, you can
 
 - [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - [A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
+- [Flexbox vs Grid](https://dev.to/nadayousry/grid-vs-flexbox-3fbh)
   
