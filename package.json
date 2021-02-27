@@ -1,6 +1,6 @@
 {
   "name": "svelte-layouts",
-  "version": "0.1.5",
+  "version": "0.1.4",
   "main": "src/index.js",
   "module": "src/index.js",
   "svelte": "src/index.js",
