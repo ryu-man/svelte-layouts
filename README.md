@@ -2,16 +2,16 @@
 	<img alt="LAYOUTS" src="./banner.png">
   <br>
   <a href="https://www.npmjs.com/package/svelte-layouts">
-    <img src="https://img.shields.io/npm/v/svelte-layouts.svg" alt="npm version">
+    <img src="https://img.shields.io/npm/v/svelte-layouts.svg?style=flat-square" alt="npm version">
   </a>
   <a href="https://github.com/ryu-man/layouts/blob/main/LICENSE">
-    <img src="https://img.shields.io/npm/l/svelte-layouts.svg" alt="license">
+    <img src="https://img.shields.io/npm/l/svelte-layouts.svg?style=flat-square" alt="license">
   </a>
 <a href="https://bundlephobia.com/result?p=svelte-layouts">
-  <img src="https://img.shields.io/bundlephobia/min/svelte-layouts"/>
+  <img src="https://img.shields.io/bundlephobia/min/svelte-layouts?style=flat-square"/>
 </a>
   <a href="https://bundlephobia.com/result?p=svelte-layouts">
-    <img src="https://badgen.net/bundlephobia/minzip/svelte-layouts">
+    <img src="https://badgen.net/bundlephobia/minzip/svelte-layouts?style=flat-square">
   </a>
 
 </p>
