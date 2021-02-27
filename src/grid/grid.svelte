@@ -38,7 +38,7 @@
     gridTemplateColumns: templateCols,
     gridTemplateRows: templateRows
   }}"
-  class="{classNames(_class, { inline, reverse, fluid }, 'grid')}"
+  class="{classNames(_class, { inline, reverse, fluid }, 'grid', 'layout')}"
 >
   <slot />
 </div>
