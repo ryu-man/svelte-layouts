@@ -40,13 +40,13 @@ export default {
   input: 'src/index.js',
   output: [
     {
-      file: pkg.module,
+      file: "dist/es/index.js",
       format: 'es',
       sourcemap: true,
       name
     },
     {
-      file: pkg.main,
+      file: "dist/umd/index.js",
       format: 'umd',
       sourcemap: true,
       name
