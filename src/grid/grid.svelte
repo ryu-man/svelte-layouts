@@ -17,8 +17,6 @@
 
   let _class = ''
   export { _class as class }
-
-  console.log(style)
 </script>
 
 <div
