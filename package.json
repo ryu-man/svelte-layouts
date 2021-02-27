@@ -1,8 +1,8 @@
 {
   "name": "svelte-layouts",
   "version": "0.1.4",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "main": "src/index.js",
+  "module": "src/index.js",
   "svelte": "src/index.js",
   "types": "src/index.d.ts",
   "description": "Easly structure your page using components",
