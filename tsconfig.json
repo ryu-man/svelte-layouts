@@ -3,6 +3,9 @@
   "include": ["src/**/*"],
   "exclude": ["node_modules/*", "__sapper__/*", "public/*"],
   "compilerOptions": {
-    "noEmitOnError": false
+    "noEmitOnError": false,
+    "allowJs": true,
+    "lib": ["ES2019"],
+    "forceConsistentCasingInFileNames": false
   }
 }

@@ -1,6 +1,13 @@
 import type { SvelteComponentTyped } from 'svelte'
-import { JustifyContent, AlignItems, Wrap } from '../types'
-import Item from './item'
+import {
+  JustifyContent,
+  AlignItems,
+  Wrap,
+  GridAlignSelf,
+  JustifySelf,
+  FlexAlignSelf
+} from '../types'
+import Item from '../Item.svelte'
 import ItemRow from './item.row'
 import ItemCol from './item.column'
 import ItemGrid from './item.grid'
@@ -16,6 +23,23 @@ export interface FlexProps {
   reverse?: boolean
   alignSelf?: string
   gap?: string
+
+  order?: string
+  grow?: string
+  shrink?: string
+  basis?: string
+  alignSelf?: FlexAlignSelf
+
+  colStart?: string
+  colEnd?: string
+  rowStart?: string
+  rowEnd?: string
+  col?: string
+  row?: string
+  area?: string
+  justifySelf?: JustifySelf
+  alignSelf?: GridAlignSelf
+
   fluid?: FluidType
   class?: string
   style?: CSSStyleDeclaration
@@ -25,10 +49,23 @@ export interface FlexProps {
  * Layouts Flex
  */
 declare class Flex extends SvelteComponentTyped<FlexProps> {
-    static item: new () => Item
-    static row: new () => ItemRow
-    static col: new () => ItemCol
-    static grid: new () => ItemGrid
+  /**
+   * @deprecated
+   */
+  static item: new () => Item
+  /**
+   * @deprecated
+   */
+  static row: new () => ItemRow
+  /**
+   * @deprecated
+   */
+  static col: new () => ItemCol
+  /**
+   * @deprecated
+   */
+  static grid: new () => ItemGrid
+  
 }
 
 export default Flex

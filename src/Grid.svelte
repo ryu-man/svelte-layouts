@@ -1,5 +1,6 @@
 <script>
-  import { classNames, css } from '../utils'
+  import { classNames, css, renameProps } from './utils'
+
   export let alignContent
   export let alignItems
   export let autoCols
@@ -13,6 +14,22 @@
   export let templateAreas
   export let templateCols
   export let templateRows
+
+  export let alignSelf
+  export let area
+  export let col
+  export let colEnd
+  export let colStart
+  export let justifySelf
+  export let row
+  export let rowEnd
+  export let rowStart
+
+  export let basis
+  export let grow
+  export let order
+  export let shrink
+
   export let style = {}
 
   let _class = ''
@@ -20,22 +37,38 @@
 </script>
 
 <div
-  use:css="{{
-    ...style,
+  use:css="{renameProps({
+    style,
     alignContent,
     alignItems,
     autoCols,
     autoRows,
-    gridColumnGap: colGap,
+    colGap,
     fluid,
     inline,
     justifyContent,
     reverse,
-    gridRowGap: rowGap,
-    gridTemplateAreas: templateAreas,
-    gridTemplateColumns: templateCols,
-    gridTemplateRows: templateRows
-  }}"
+    rowGap,
+    templateAreas,
+    templateCols,
+    templateRows,
+
+    colStart,
+    colEnd,
+    rowStart,
+    rowEnd,
+    col,
+    row,
+    area,
+    justifySelf,
+    alignSelf,
+
+    alignSelf,
+    basis,
+    grow,
+    shrink,
+    order
+  })}"
   class="{classNames(_class, { inline, reverse, fluid }, 'grid', 'layout')}"
 >
   <slot />

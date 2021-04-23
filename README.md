@@ -13,7 +13,6 @@
   <a href="https://bundlephobia.com/result?p=svelte-layouts">
     <img src="https://badgen.net/bundlephobia/minzip/svelte-layouts?style=flat-square">
   </a>
-
 </p>
 
 # Layouts
@@ -49,17 +48,38 @@ _Note: svelte-layouts support type definitions_
 <Col></Col>
 ```
 
-| Prop           | Type    |
-| -------------- | ------- |
-| justifyContent | string  |
-| alignItems     | string  |
-| alignContent   | string  |
-| wrap           | string  |
-| inline         | boolean |
-| reverse        | boolean |
-| alignSelf      | string  |
-| gap            | string  |
-| fluid          | string  |
+| Prop            | Type    |
+| --------------- | ------- |
+| justifyContent  | string  |
+| alignItems      | string  |
+| alignContent    | string  |
+| wrap            | string  |
+| inline          | boolean |
+| reverse         | boolean |
+| alignSelf       | string  |
+| gap             | string  |
+|                 |         |
+| Flex item props |
+| order           | string  |
+| grow            | string  |
+| shrink          | string  |
+| basis           | string  |
+| alignSelf       | string  |
+| justifySelf     | string  |
+|                 |         |
+| Grid item props |
+| alignSelf       | string  |
+| justifySelf     | string  |
+| colStart        | string  |
+| colEnd          | boolean |
+| rowStart        | boolean |
+| rowEnd          | string  |
+| col             | string  |
+| row             | string  |
+| area            | string  |
+|                 |         |
+| Other           |
+| fluid           | string  |
 
 ## Grid
 
@@ -72,109 +92,136 @@ _Note: svelte-layouts support type definitions_
 <Grid templateRows="auto" templateCols="20vw 1fr"></Grid>
 ```
 
-| Prop           | Type    |
-| -------------- | ------- |
-| templateCols   | string  |
-| templateRows   | string  |
-| templateAreas  | string  |
-| colGap         | string  |
-| rowGap         | string  |
-| autoCols       | string  |
-| autoRows       | string  |
-| justifyContent | string  |
-| alignItems     | string  |
-| alignContent   | string  |
-| alignSelf      | string  |
-| wrap           | string  |
-| inline         | boolean |
-| reverse        | boolean |
-| fluid          | string  |
+| Prop            | Type    |
+| --------------- | ------- |
+| Grid props      |
+| templateCols    | string  |
+| templateRows    | string  |
+| templateAreas   | string  |
+| colGap          | string  |
+| rowGap          | string  |
+| autoCols        | string  |
+| autoRows        | string  |
+| justifyContent  | string  |
+| alignItems      | string  |
+| alignContent    | string  |
+| alignSelf       | string  |
+| wrap            | string  |
+| inline          | boolean |
+| reverse         | boolean |
+|                 |         |
+| Grid item props |
+| alignSelf       | string  |
+| justifySelf     | string  |
+| colStart        | string  |
+| colEnd          | boolean |
+| rowStart        | boolean |
+| rowEnd          | string  |
+| col             | string  |
+| row             | string  |
+| area            | string  |
+|                 |         |
+| Flex item props |
+| order           | string  |
+| grow            | string  |
+| shrink          | string  |
+| basis           | string  |
+| alignSelf       | string  |
+| justifySelf     | string  |
+|                 |         |
+| Other           |
+| fluid           | string  |
 
-## Content
+## Item
 
-As You can use any HTML element in the content you can also use predefined items which let you have more control over the element directly
+As You can use any HTML element in the content you can also use Item component which let you have more control over the element directly, each of Col, Row and Grid can be used as Flex/Grid items
 
 ```html
 <script>
-import { Row } from 'svelte-layouts'
+  import { Grid, Item, Row, Col } from 'svelte-layouts'
 </script>
 
 <Row>
-    // Create div element
-    // can't control directly
+    // Create div element, can't control directly
     <div></div>
 
     // Create a div item
     // you can use content props only
-    <Row.item></Row.item>
+    <Item></Item>
 
     // Create a row item
     // you can use Row props + content props
-    <Row.row></Row.row>
+    <Row></Row>
 
     // Create a Col item
     // you can use Column props + content props
-    <Row.col></Row.col>
+    <Col></Col>
 
     // Create a grid item
     // you can use Grid props + content props
-    <Row.grid></Row.grid>
+    <Grid></Grid>
 </Row>
-```
-
-### Row/Col Content Props
-
-| Prop      | Type   |
-| --------- | ------ |
-| order     | string |
-| grow      | string |
-| shrink    | string |
-| basis     | string |
-| alignSelf | string |
-
-```html
-<script>
-    import { Grid } from 'svelte-layouts'
-</script>
 
 <Grid>
     // Create div element, can't controls directly
-    // can't control directly
     <div></div>
 
-    // Create a div item
-    // you can use content props only
-    <Grid.item></Grid.item>
+    // Create a div grid item
+    <Item></Item>
 
-    // Create a row item 
-    // you can use Row props + content props
-    <Grid.row></Grid.row>
+    // Create a row grid item 
+    <Row></Row>
 
-    // Create a column item
-    // you can use Column props + content props
-    <Grid.col></Grid.col>
+    // Create a column grid item
+    <Col></Col>
 
-    // Create a grid item 
-    // you can use Grid props + content props
-    <Grid.grid></Grid.grid>
+    // Create a grid grid item 
+    <Grid></Grid>
 </Grid>
 ```
 
-## Grid Content Props
+### Item Props
 
-| Prop        | Type    |
-| ----------- | ------- |
-| justifySelf | string  |
-| alignSelf   | string  |
-| colStart    | string  |
-| colEnd      | boolean |
-| rowStart    | boolean |
-| rowEnd      | string  |
-| col         | string  |
-| row         | string  |
-| area        | string  |
-| gap         | string  |
-| fluid       | string  |
+| Prop            | Type    |
+| --------------- | ------- |
+| Flex props      |
+| order           | string  |
+| grow            | string  |
+| shrink          | string  |
+| basis           | string  |
+|                 |         |
+| Grid Item props |         |
+| alignSelf       | string  |
+| justifySelf     | string  |
+| colStart        | string  |
+| colEnd          | boolean |
+| rowStart        | boolean |
+| rowEnd          | string  |
+| col             | string  |
+| row             | string  |
+| area            | string  |
+|                 |         |
+| Other           |
+| fluid           | string  |
+
+## Responsive Design
+```html
+<div class="container">
+  <Row class="custom-class"></Row>
+</div>
+```
+```css
+@media (min-width: 1000px) {
+/*
+you can target .col , .row, .grid, .item, also you can add .layout class to prevent style collision or you can target a specific  class provided to the component via it class prop
+.class :global(.class) syntax is recommended to prevent style leakage
+*/
+  .container :global(.col) { 
+    /*make sure to use !important to override component's inline style*/
+    background-color: black !important;
+  }
+}
+```
 
 ## License
 

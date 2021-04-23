@@ -3,5 +3,6 @@
 /@types/
 /dist/
 /.vscode
+/example
 .DS_Store
 package-lock.json

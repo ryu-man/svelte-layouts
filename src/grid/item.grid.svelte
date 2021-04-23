@@ -1,6 +1,6 @@
 <script>
   import { classNames } from '../utils'
-  import Grid from './grid.svelte'
+  import Grid from '../Grid.svelte'
 
   export let alignSelf
   export let area
@@ -33,18 +33,7 @@
 
 <Grid
   class="{classNames(_class, 'grid-item')}"
-  style="{{
-    ...style,
-    gridColumnStart: colStart,
-    gridColumnEnd: colEnd,
-    gridRowStart: rowStart,
-    gridRowEnd: rowEnd,
-    gridColumn: col,
-    gridRow: row,
-    gridArea: area,
-    justifySelf,
-    alignSelf
-  }}"
+  style="{style}"
   alignContent="{alignContent}"
   alignItems="{alignItems}"
   autoCols="{autoCols}"
@@ -58,6 +47,15 @@
   templateAreas="{templateAreas}"
   templateCols="{templateCols}"
   templateRows="{templateRows}"
+  colStart="{colStart}"
+  colEnd="{colEnd}"
+  rowStart="{rowStart}"
+  rowEnd="{rowEnd}"
+  col="{col}"
+  row="{row}"
+  area="{area}"
+  justifySelf="{justifySelf}"
+  alignSelf="{alignSelf}"
 >
   <slot />
 </Grid>

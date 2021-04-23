@@ -1,4 +1,4 @@
-import type Flex from './flex'
+import type Flex from './flex/flex'
 
 /**
  * Layouts Row

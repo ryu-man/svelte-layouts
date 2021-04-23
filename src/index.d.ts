@@ -1,2 +1,4 @@
-export {Grid} from './grid'
-export {Row,Col} from './flex'
+export { Col, ItemCol, ItemRow, Row } from './flex'
+export { Grid, ItemGrid } from './grid'
+export { default as Item } from './Item.svelte'
+export { default as Media } from './Media.svelte'

@@ -1,5 +1,5 @@
 <script>
-  import Row from '../flex/row.svelte'
+  import Row from '../row.svelte'
   import { classNames } from '../utils'
 
   export let alignSelf
@@ -28,18 +28,7 @@
 
 <Row
   class="{classNames(_class, 'grid-item')}"
-  style="{{
-    ...style,
-    gridColumnStart: colStart,
-    gridColumnEnd: colEnd,
-    gridRowStart: rowStart,
-    gridRowEnd: rowEnd,
-    gridColumn: col,
-    gridRow: row,
-    gridArea: area,
-    justifySelf,
-    alignSelf
-  }}"
+  style="{style}"
   alignContent="{alignContent}"
   alignItems="{alignItems}"
   fluid="{fluid}"
@@ -48,6 +37,15 @@
   justifyContent="{justifyContent}"
   reverse="{reverse}"
   wrap="{wrap}"
+  colStart="{colStart}"
+  colEnd="{colEnd}"
+  rowStart="{rowStart}"
+  rowEnd="{rowEnd}"
+  col="{col}"
+  row="{row}"
+  area="{area}"
+  justifySelf="{justifySelf}"
+  alignSelf="{alignSelf}"
 >
-<slot />
+  <slot />
 </Row>

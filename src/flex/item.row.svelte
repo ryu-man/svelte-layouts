@@ -1,5 +1,5 @@
 <script>
-  import Row from '../flex/row.svelte'
+  import Row from '../Row.svelte'
   import { classNames } from '../utils'
 
   export let alignContent
@@ -24,14 +24,7 @@
 
 <Row
   class="{classNames(_class, 'flex-item')}"
-  style="{{
-    ...style,
-    alignSelf,
-    flexBasis: basis,
-    flexGrow: grow,
-    flexShrink: shrink,
-    order
-  }}"
+  style="{style}"
   alignContent="{alignContent}"
   alignItems="{alignItems}"
   fluid="{fluid}"
@@ -40,6 +33,11 @@
   justifyContent="{justifyContent}"
   reverse="{reverse}"
   wrap="{wrap}"
+  alignSelf="{alignSelf}"
+  basis="{basis}"
+  grow="{grow}"
+  shrink="{shrink}"
+  order="{order}"
 >
   <slot />
 </Row>

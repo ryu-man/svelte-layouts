@@ -1,5 +1,5 @@
 <script>
-  import Grid from '../grid/grid.svelte'
+  import Grid from '../Grid.svelte'
   import { classNames } from '../utils'
 
   export let alignSelf
@@ -29,14 +29,7 @@
 
 <Grid
   class="{classNames(_class, 'flex-item')}"
-  style="{{
-    ...style,
-    alignSelf,
-    flexBasis: basis,
-    flexGrow: grow,
-    flexShrink: shrink,
-    order
-  }}"
+  style="{style}"
   alignContent="{alignContent}"
   alignItems="{alignItems}"
   autoCols="{autoCols}"
@@ -50,6 +43,11 @@
   templateAreas="{templateAreas}"
   templateCols="{templateCols}"
   templateRows="{templateRows}"
+  alignSelf="{alignSelf}"
+  basis="{basis}"
+  grow="{grow}"
+  shrink="{shrink}"
+  order="{order}"
 >
   <slot />
 </Grid>
