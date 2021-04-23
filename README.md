@@ -145,20 +145,16 @@ As You can use any HTML element in the content you can also use Item component w
     // Create div element, can't control directly
     <div></div>
 
-    // Create a div item
-    // you can use content props only
+    // Create an item
     <Item></Item>
 
     // Create a row item
-    // you can use Row props + content props
     <Row></Row>
 
     // Create a Col item
-    // you can use Column props + content props
     <Col></Col>
 
     // Create a grid item
-    // you can use Grid props + content props
     <Grid></Grid>
 </Row>
 
@@ -166,16 +162,17 @@ As You can use any HTML element in the content you can also use Item component w
     // Create div element, can't controls directly
     <div></div>
 
-    // Create a div grid item
+    // Create an item
+    // you can use flex/grid child props only
     <Item></Item>
 
-    // Create a row grid item 
+    // Create a row as item 
     <Row></Row>
 
-    // Create a column grid item
+    // Create a column as item
     <Col></Col>
 
-    // Create a grid grid item 
+    // Create a grid  as item 
     <Grid></Grid>
 </Grid>
 ```
