@@ -205,15 +205,18 @@ As You can use any HTML element in the content you can also use Item component w
 | fluid           | string  |
 
 ## Responsive Design
+
 ```html
 <div class="container">
   <Row class="custom-class"></Row>
 </div>
 ```
+
 ```css
 @media (min-width: 1000px) {
 /*
-you can target .col , .row, .grid, .item, also you can add .layout class to prevent style collision or you can target a specific  class provided to the component via it class prop
+you can target .col , .row, .grid, .item, also you can add .layout class to prevent style collision 
+or you can target a specific  class provided to the component via it class prop
 .class :global(.class) syntax is recommended to prevent style leakage
 */
   .container :global(.col) { 

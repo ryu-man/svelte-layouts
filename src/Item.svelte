@@ -40,7 +40,7 @@
     alignSelf,
     style
   })}"
-  class="{classNames(_class, 'flex-item')}"
+  class="{classNames(_class, 'item', 'layout')}"
 >
   <slot />
 </div>
