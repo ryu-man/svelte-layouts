@@ -64,7 +64,7 @@
   .layout {
     display: flex;
   }
-  .column {
+  .col {
     flex-direction: column;
   }
   .reverse {

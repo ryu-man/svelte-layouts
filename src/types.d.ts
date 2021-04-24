@@ -24,7 +24,7 @@ export declare type AlignItems =
     "self-end"
 
 declare type FlexAlignSelf ="auto" | "flex-start" | "flex-end" | "center" | "baseline" | "stretch";
-declare type JustifySelf = "start" | "end" | "center" | "stretch"
+declare type JustifySelf = "flex-start" | "flex-end" | "center" | "stretch"
 declare type GridAlignSelf = JustifySelf
 
 export declare type Wrap =
