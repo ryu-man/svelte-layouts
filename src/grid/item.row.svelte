@@ -1,5 +1,5 @@
 <script>
-  import Row from '../row.svelte'
+  import Row from '../Row.svelte'
   import { classNames } from '../utils'
 
   export let alignSelf
