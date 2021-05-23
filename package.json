@@ -1,9 +1,10 @@
 {
   "name": "svelte-layouts",
   "version": "0.2.1",
-  "module": "src/index.js",
-  "svelte": "src/index.js",
-  "types": "src/index.d.ts",
+  "main": "./src/index.js",
+  "module": "./src/index.js",
+  "svelte": "./src/index.js",
+  "types": "./src/index.d.ts",
   "description": "Easly structure your page using components",
   "homepage": "https://github.com/ryu-man/svelte-layouts#readme",
   "repository": {

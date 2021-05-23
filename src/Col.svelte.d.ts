@@ -1,5 +1,4 @@
-import type Flex from './flex/flex'
-import type { SvelteComponentTyped } from 'svelte'
+import type FlexContainer from './flex'
 import {
   JustifyContent,
   AlignItems,
@@ -8,13 +7,9 @@ import {
   JustifySelf,
   FlexAlignSelf
 } from './types'
-import Item from './item.svelte'
-import ItemRow from './item.row'
-import ItemCol from './item.column'
-import ItemGrid from './item.grid'
 
 declare type FluidType = 'width' | 'height' | 'both'
 
-declare class Column extends Flex {}
+declare class Column extends FlexContainer {}
 
 export default Column

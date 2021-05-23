@@ -16,6 +16,7 @@ export interface ItemProps {
   grow?: string
   shrink?: string
   basis?: string
+  class?: string
   style?: CSSStyleDeclaration
 }
 

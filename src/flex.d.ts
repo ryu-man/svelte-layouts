@@ -6,11 +6,7 @@ import {
   GridAlignSelf,
   JustifySelf,
   FlexAlignSelf
-} from '../types'
-import Item from '../Item.svelte'
-import ItemRow from './item.row'
-import ItemCol from './item.column'
-import ItemGrid from './item.grid'
+} from './types'
 
 declare type FluidType = 'width' | 'height' | 'both'
 
@@ -48,24 +44,6 @@ export interface FlexProps {
 /**
  * Layouts Flex
  */
-declare class Flex extends SvelteComponentTyped<FlexProps> {
-  /**
-   * @deprecated
-   */
-  static item: new () => Item
-  /**
-   * @deprecated
-   */
-  static row: new () => ItemRow
-  /**
-   * @deprecated
-   */
-  static col: new () => ItemCol
-  /**
-   * @deprecated
-   */
-  static grid: new () => ItemGrid
-  
-}
+declare class Flex extends SvelteComponentTyped<FlexProps> {}
 
 export default Flex

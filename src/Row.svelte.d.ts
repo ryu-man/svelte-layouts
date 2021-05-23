@@ -1,8 +1,8 @@
-import type Flex from './flex/flex'
+import type FlexContainer from './flex'
 
 /**
  * Layouts Row
  */
-declare class Row extends Flex {}
+declare class Row extends FlexContainer {}
 
 export default Row
