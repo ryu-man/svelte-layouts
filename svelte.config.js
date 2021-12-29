@@ -14,7 +14,7 @@ const config = {
 		target: '#svelte',
 		package: {
 			emitTypes: true,
-			exports: (filePath) => filePath === 'index.js'
+			exports: (filePath) => filePath === 'index.ts'
 		},
 		vite: {
 			resolve: {
