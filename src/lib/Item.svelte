@@ -26,6 +26,8 @@
 
 	export let padding: Properties['padding'] = style['padding'];
 	export let margin: Properties['margin'] = style['margin'];
+	export let width: Properties['width'] = style['width'];
+	export let height: Properties['height'] = style['height'];
 
 	export let inline: boolean = false;
 	export let fluid: Fluid = undefined;
@@ -55,7 +57,9 @@
 		row,
 		area,
 		padding,
-		margin
+		margin,
+		width,
+		height
 	}}
 >
 	<slot />

@@ -38,6 +38,8 @@
 
 	export let padding: Properties['padding'] = style['padding'];
 	export let margin: Properties['margin'] = style['margin'];
+	export let width: Properties['width'] = style['width'];
+	export let height: Properties['height'] = style['height'];
 
 	export let fluid: Fluid = undefined;
 	export let inline: boolean = false;
@@ -80,7 +82,9 @@
 		flex,
 		order,
 		padding,
-		margin
+		margin,
+		width,
+		height
 	}}
 >
 	<slot />
