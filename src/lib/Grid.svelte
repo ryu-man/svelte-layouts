@@ -6,6 +6,8 @@
 
 	let _class: string = '';
 	export { _class as class };
+	export let style: Properties = {};
+
 	export let alignContent: Properties['alignContent'] = undefined;
 	export let alignItems: Properties['alignItems'] = undefined;
 	export let justifySelf: Properties['justifySelf'] = undefined;
@@ -32,12 +34,14 @@
 	export let grow: Properties['flexGrow'] = undefined;
 	export let order: Properties['order'] = undefined;
 	export let shrink: Properties['flexShrink'] = undefined;
-	export let flex: Properties['flex'] = undefined
+	export let flex: Properties['flex'] = undefined;
+
+	export let padding: Properties['padding'] = style['padding'];
+	export let margin: Properties['margin'] = style['margin'];
 
 	export let fluid: Fluid = undefined;
 	export let inline: boolean = false;
 	export let reverse: boolean = false;
-	export let style: Properties = {};
 
 	export let use: Action = () => {};
 </script>
@@ -74,7 +78,9 @@
 		grow,
 		shrink,
 		flex,
-		order
+		order,
+		padding,
+		margin
 	}}
 >
 	<slot />

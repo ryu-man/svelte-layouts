@@ -6,13 +6,15 @@
 
 	let _class: string = '';
 	export { _class as class };
+	export let style: Properties = {};
+
 	export let alignSelf: Properties['alignSelf'] = undefined;
 	export let justifySelf: Properties['justifySelf'] = undefined;
 	export let basis: Properties['flexBasis'] = undefined;
 	export let grow: Properties['flexGrow'] = undefined;
 	export let shrink: Properties['flexShrink'] = undefined;
 	export let order: Properties['order'] = undefined;
-	export let flex: Properties['flex'] = undefined
+	export let flex: Properties['flex'] = undefined;
 
 	export let area: Properties['gridArea'] = undefined;
 	export let col: Properties['gridColumn'] = undefined;
@@ -22,11 +24,13 @@
 	export let rowEnd: Properties['gridRowEnd'] = undefined;
 	export let rowStart: Properties['gridRowStart'] = undefined;
 
+	export let padding: Properties['padding'] = style['padding'];
+	export let margin: Properties['margin'] = style['margin'];
+
 	export let inline: boolean = false;
 	export let fluid: Fluid = undefined;
-	export let style: Properties = {};
 
-	export let use: Action = ()=>{};
+	export let use: Action = () => {};
 </script>
 
 <Layout
@@ -49,7 +53,9 @@
 		rowEnd,
 		col,
 		row,
-		area
+		area,
+		padding,
+		margin
 	}}
 >
 	<slot />

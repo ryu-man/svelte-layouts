@@ -6,6 +6,8 @@
 
 	let _class: string = '';
 	export { _class as class };
+	export let style: Properties = {};
+	
 	export let justifyContent: Properties['justifyContent'] = undefined;
 	export let alignContent: Properties['alignContent'] = undefined;
 	export let alignItems: Properties['alignItems'] = undefined;
@@ -27,10 +29,13 @@
 	export let row: Properties['gridRow'] = undefined;
 	export let rowEnd: Properties['gridRowEnd'] = undefined;
 	export let rowStart: Properties['gridRowStart'] = undefined;
+
+	export let padding: Properties['padding'] = style['padding'];
+	export let margin: Properties['margin'] = style['margin'];
+
 	export let fluid: Fluid = undefined;
 	export let inline: boolean = false;
 	export let reverse: boolean = false;
-	export let style: Properties = {};
 
 	export let use: Action = ()=>{};
 </script>
@@ -61,7 +66,9 @@
 		rowEnd,
 		col,
 		row,
-		area
+		area,
+		padding,
+		margin
 	}}
 >
 	<slot />
