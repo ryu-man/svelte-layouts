@@ -18,6 +18,7 @@
 	export let grow: Properties['flexGrow'] = undefined;
 	export let order: Properties['order'] = undefined;
 	export let shrink: Properties['flexShrink'] = undefined;
+	export let flex: Properties['flex'] = undefined
   
 	export let area: Properties['gridArea'] = undefined;
 	export let col: Properties['gridColumn'] = undefined;
@@ -52,6 +53,7 @@
 		basis,
 		grow,
 		shrink,
+		flex,
 		order,
 		colStart,
 		colEnd,

@@ -4,7 +4,7 @@
 	import type { Action, Fluid } from './types';
 	import type { Properties } from 'csstype';
 
-	let _class: string;
+	let _class: string = '';
 	export { _class as class };
 	export let alignSelf: Properties['alignSelf'] = undefined;
 	export let justifySelf: Properties['justifySelf'] = undefined;
@@ -12,6 +12,7 @@
 	export let grow: Properties['flexGrow'] = undefined;
 	export let shrink: Properties['flexShrink'] = undefined;
 	export let order: Properties['order'] = undefined;
+	export let flex: Properties['flex'] = undefined
 
 	export let area: Properties['gridArea'] = undefined;
 	export let col: Properties['gridColumn'] = undefined;
@@ -40,6 +41,7 @@
 		basis,
 		grow,
 		shrink,
+		flex,
 		order,
 		colStart,
 		colEnd,

@@ -79,6 +79,7 @@ export function renameProps({
 		flexBasis,
 		flexGrow,
 		flexShrink,
+		flex,
 		order,
 		gridColumnStart,
 		gridColumnEnd,

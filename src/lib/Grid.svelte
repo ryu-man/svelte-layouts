@@ -32,6 +32,7 @@
 	export let grow: Properties['flexGrow'] = undefined;
 	export let order: Properties['order'] = undefined;
 	export let shrink: Properties['flexShrink'] = undefined;
+	export let flex: Properties['flex'] = undefined
 
 	export let fluid: Fluid = undefined;
 	export let inline: boolean = false;
@@ -72,6 +73,7 @@
 		basis,
 		grow,
 		shrink,
+		flex,
 		order
 	}}
 >
