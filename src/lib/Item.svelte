@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { classNames } from './utils';
 	import Layout from './Layout.svelte';
-	import type { Action, Fluid } from './types';
+	import type { Action } from './types';
 	import type { Properties } from 'csstype';
 
 	let _class: string = '';
@@ -26,12 +26,11 @@
 
 	export let padding: Properties['padding'] = style['padding'];
 	export let margin: Properties['margin'] = style['margin'];
-	export let width: Properties['width'] = style['width'];
-	export let height: Properties['height'] = style['height'];
-	export let boxSizing: Properties['boxSizing'] = style['boxSizing'] ?? "border-box"
+	export let width: Properties['width'] | boolean = style['width'];
+	export let height: Properties['height'] | boolean = style['height'];
+	export let boxSizing: Properties['boxSizing'] = style['boxSizing'] ?? 'border-box';
 
 	export let inline: boolean = false;
-	export let fluid: Fluid = undefined;
 
 	export let use: Action = () => {};
 </script>
@@ -39,7 +38,8 @@
 <Layout
 	class={classNames(_class, 'item')}
 	{inline}
-	{fluid}
+	width={width === true}
+	height={height === true}
 	{use}
 	style={{
 		...style,

@@ -2,11 +2,12 @@
 	import type { Action, LayoutStyle } from './types';
 	import { classNames, css, renameProps } from './utils';
 
-	let _class:string = '';
+	let _class: string = '';
 	export { _class as class };
 	export let inline: boolean = false;
 	export let reverse: boolean = false;
-	export let fluid: 'width' | 'height' | 'both' | undefined = undefined;
+	export let width: boolean = false;
+	export let height: boolean = false;
 	export let style: LayoutStyle = {};
 
 	export let use: Action = (node: HTMLElement) => {};
@@ -14,7 +15,7 @@
 
 <div
 	use:css={renameProps(style)}
-	class={classNames(_class, { inline, reverse, fluid }, 'layout')}
+	class={classNames(_class, { inline, reverse, width, height }, 'layout')}
 	use:use
 >
 	<slot />
@@ -51,14 +52,10 @@
 		display: inline-grid;
 	}
 
-	.layout.fluid.width {
+	.layout.width {
 		width: 100%;
 	}
-	.layout.fluid.height {
-		height: 100%;
-	}
-	.layout.fluid.both {
-		width: 100%;
+	.layout.height {
 		height: 100%;
 	}
 
