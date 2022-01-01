@@ -11,7 +11,7 @@
 
 # Layouts
 
-This project is an implementation of CSS Flexbox & Grid for [Svelte](https://svelte.dev/) framework for making it easier for the developer to create layouts and build apps faster 
+This project is an implementation of CSS Flexbox & Grid for [Svelte](https://svelte.dev/) framework for making it easier for developers to create layouts and build apps faster 
 
 ## Install
 
