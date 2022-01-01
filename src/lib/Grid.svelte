@@ -15,9 +15,10 @@
 	export let autoCols: Properties['gridAutoColumns'] = undefined;
 	export let autoRows: Properties['gridAutoRows'] = undefined;
 	export let autoFlow: Properties['gridAutoFlow'] = undefined;
-	export let colGap: Properties['columnGap'] = undefined;
 	export let justifyContent: Properties['justifyContent'] = undefined;
-	export let rowGap: Properties['rowGap'] = undefined;
+	export let gap: Properties['gap'] = undefined;
+	export let colGap: Properties['columnGap'] = gap;
+	export let rowGap: Properties['rowGap'] = gap;
 	export let templateAreas: Properties['gridTemplateAreas'] = undefined;
 	export let templateCols: Properties['gridTemplateColumns'] = undefined;
 	export let templateRows: Properties['gridTemplateRows'] = undefined;
@@ -40,6 +41,7 @@
 	export let margin: Properties['margin'] = style['margin'];
 	export let width: Properties['width'] = style['width'];
 	export let height: Properties['height'] = style['height'];
+	export let boxSizing: Properties['boxSizing'] = style['boxSizing'] ?? 'border-box';
 
 	export let fluid: Fluid = undefined;
 	export let inline: boolean = false;
@@ -61,9 +63,9 @@
 		autoCols,
 		autoRows,
 		autoFlow,
-		colGap,
 		justifyContent,
-		rowGap,
+		colGap: colGap || gap,
+		rowGap: rowGap || gap,
 		templateAreas,
 		templateCols,
 		templateRows,
@@ -84,7 +86,8 @@
 		padding,
 		margin,
 		width,
-		height
+		height,
+		boxSizing
 	}}
 >
 	<slot />

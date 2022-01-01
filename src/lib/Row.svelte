@@ -34,6 +34,7 @@
 	export let margin: Properties['margin'] = style['margin'];
 	export let width: Properties['width'] = style['width'];
 	export let height: Properties['height'] = style['height'];
+	export let boxSizing: Properties['boxSizing'] = style['boxSizing'] ?? "border-box"
 
 	export let fluid: Fluid = undefined;
 	export let inline: boolean = false;
@@ -72,7 +73,8 @@
 		padding,
 		margin,
 		width,
-		height
+		height,
+		boxSizing
 	}}
 >
 	<slot />
