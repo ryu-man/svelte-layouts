@@ -7,17 +7,11 @@
   <a href="https://github.com/ryu-man/layouts/blob/main/LICENSE">
     <img src="https://img.shields.io/npm/l/svelte-layouts.svg?style=flat-square" alt="license">
   </a>
-<a href="https://bundlephobia.com/result?p=svelte-layouts">
-  <img src="https://img.shields.io/bundlephobia/min/svelte-layouts?style=flat-square"/>
-</a>
-  <a href="https://bundlephobia.com/result?p=svelte-layouts">
-    <img src="https://badgen.net/bundlephobia/minzip/svelte-layouts?style=flat-square">
-  </a>
 </p>
 
 # Layouts
 
-This project is an implementation of css Flexbox & Grid for [svelte](https://svelte.dev/) framework
+This project is an implementation of CSS Flexbox & Grid for [Svelte](https://svelte.dev/) framework for making it easier for the developer to create layouts and build apps faster 
 
 ## Install
 
@@ -31,175 +25,46 @@ yarn add svelte-layouts
 
 ## Get started
 
-Layouts have three main components: Row, Col (Column) and Grid.
+Layouts have four main components: Row, Col (Column) ,Grid and Item
 
-_Note: svelte-layouts support type definitions_
+**Row**: a layout with horizontal main-axis, place it items from left to right
 
-## Row / Col
+**Col**: a layout with vertical main-axis, place it items from top to left
+
+**Grid**: a multi-directional layout, where items can be positione vertically and horizontally
+
+**Item**: a controllable layout item
+
+## Examples
 
 ```html
 <script>
-    import { Row, Col } from 'svelte-layouts'
+    import { Row, Col, Grid, Item } from 'svelte-layouts'
 </script>
 
 // control how elements are positioned horizontally
-<Row justifyContent="space-between"></Row>
+<Row justifyContent="space-between">
+  // Create div element, controled with style property
+  <div></div>
+
+  // Create an item
+  <Item></Item>
+
+  // Create a row item
+  <Row></Row>
+
+  // Create a Col item
+  <Col></Col>
+
+  // Create a grid item
+  <Grid></Grid>
+</Row>
 
 <Col></Col>
-```
-
-| Prop            | Type    |
-| --------------- | ------- |
-| justifyContent  | string  |
-| alignItems      | string  |
-| alignContent    | string  |
-| wrap            | string  |
-| inline          | boolean |
-| reverse         | boolean |
-| alignSelf       | string  |
-| gap             | string  |
-|                 |         |
-| Flex item props |
-| order           | string  |
-| grow            | string  |
-| shrink          | string  |
-| basis           | string  |
-| alignSelf       | string  |
-| justifySelf     | string  |
-|                 |         |
-| Grid item props |
-| alignSelf       | string  |
-| justifySelf     | string  |
-| colStart        | string  |
-| colEnd          | boolean |
-| rowStart        | boolean |
-| rowEnd          | string  |
-| col             | string  |
-| row             | string  |
-| area            | string  |
-|                 |         |
-| Other           |
-| fluid           | string  |
-
-## Grid
-
-```html
-<script>
-    import { Grid } from 'svelte-layouts'
-</script>
 
 // Define the number & width of rows and columns
 <Grid templateRows="auto" templateCols="20vw 1fr"></Grid>
 ```
-
-| Prop            | Type    |
-| --------------- | ------- |
-| Grid props      |
-| templateCols    | string  |
-| templateRows    | string  |
-| templateAreas   | string  |
-| colGap          | string  |
-| rowGap          | string  |
-| autoCols        | string  |
-| autoRows        | string  |
-| justifyContent  | string  |
-| alignItems      | string  |
-| alignContent    | string  |
-| alignSelf       | string  |
-| wrap            | string  |
-| inline          | boolean |
-| reverse         | boolean |
-|                 |         |
-| Grid item props |
-| alignSelf       | string  |
-| justifySelf     | string  |
-| colStart        | string  |
-| colEnd          | boolean |
-| rowStart        | boolean |
-| rowEnd          | string  |
-| col             | string  |
-| row             | string  |
-| area            | string  |
-|                 |         |
-| Flex item props |
-| order           | string  |
-| grow            | string  |
-| shrink          | string  |
-| basis           | string  |
-| alignSelf       | string  |
-| justifySelf     | string  |
-|                 |         |
-| Other           |
-| fluid           | string  |
-
-## Item
-
-As You can use any HTML element in the content you can also use Item component which let you have more control over the element directly, each of Col, Row and Grid can be used as Flex/Grid items
-
-```html
-<script>
-  import { Grid, Item, Row, Col } from 'svelte-layouts'
-</script>
-
-<Row>
-    // Create div element, can't control directly
-    <div></div>
-
-    // Create an item
-    <Item></Item>
-
-    // Create a row item
-    <Row></Row>
-
-    // Create a Col item
-    <Col></Col>
-
-    // Create a grid item
-    <Grid></Grid>
-</Row>
-
-<Grid>
-    // Create div element, can't controls directly
-    <div></div>
-
-    // Create an item
-    // you can use flex/grid child props only
-    <Item></Item>
-
-    // Create a row as item 
-    <Row></Row>
-
-    // Create a column as item
-    <Col></Col>
-
-    // Create a grid  as item 
-    <Grid></Grid>
-</Grid>
-```
-
-### Item Props
-
-| Prop            | Type    |
-| --------------- | ------- |
-| Flex props      |
-| order           | string  |
-| grow            | string  |
-| shrink          | string  |
-| basis           | string  |
-|                 |         |
-| Grid Item props |         |
-| alignSelf       | string  |
-| justifySelf     | string  |
-| colStart        | string  |
-| colEnd          | boolean |
-| rowStart        | boolean |
-| rowEnd          | string  |
-| col             | string  |
-| row             | string  |
-| area            | string  |
-|                 |         |
-| Other           |
-| fluid           | string  |
 
 ## Responsive Design
 
@@ -216,7 +81,7 @@ you can target .col , .row, .grid, .item, also you can add .layout class to prev
 or you can target a specific  class provided to the component via it class prop
 .class :global(.class) syntax is recommended to prevent style leakage
 */
-  .container :global(.col) { 
+  .container :global(.row) { 
     /*make sure to use !important to override component's inline style*/
     background-color: black !important;
   }
